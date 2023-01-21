@@ -1,8 +1,7 @@
 #!/bin/bash
-
-#############################################
-####### Created by alex42q ##################
-#############################################
+###################################
+######### Created by alex42q ######
+###################################
 
 read -p "Enter the path you want to set: " path
 
@@ -438,5 +437,10 @@ if [ -d "$path/$name" ]; then
     fi
 else
     main
+    echo "Compile the code!"
+    cd $path/$name
+    npx tsc
+    echo "To run the service run -> sudo npm run start_dev"
+    echo "Happy hacking :)"
 fi
 
